@@ -7,6 +7,9 @@ def init_browser():
     return Browser("chrome", **executable_path, headless=False)
 
 def scrape():
+    browser = init_browser()
+    mars = {}
+    
     #1
     url = 'https://mars.nasa.gov/news/'
     browser.visit(url)
@@ -115,6 +118,5 @@ def scrape():
     {'title': 'Cerberus Hemisphere', 'img_url': cerberus_href}
     ]
     
-browser.quit()
-
-return scrape_mars.py
+    browser.quit()
+    return hemisphere_image_urls.py

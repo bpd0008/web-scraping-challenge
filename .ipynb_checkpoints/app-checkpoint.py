@@ -23,7 +23,7 @@ def scraper():
     
     mars.update(
         {}, 
-        mars_data, 
+        mars_df, 
         upsert=True
     )
 
